@@ -20,5 +20,10 @@
   "bugs": {
     "url": "https://github.com/Mustofaadni04040/apprestapi/issues"
   },
-  "homepage": "https://github.com/Mustofaadni04040/apprestapi#readme"
+  "homepage": "https://github.com/Mustofaadni04040/apprestapi#readme",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2",
+    "mysql": "^2.18.1"
+  }
 }
