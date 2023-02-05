@@ -1,5 +1,7 @@
 "use strict";
 
+const { json } = require("body-parser");
+
 // untuk memanggil
 module.exports = function (app) {
     var jsonku = require("./controller");
@@ -15,4 +17,7 @@ module.exports = function (app) {
 
     app.route("/tambah")
         .post(jsonku.tambahmahasiswa);
+
+    app.route("/ubah")
+        .put(jsonku.ubahMahasiswa);
 }
