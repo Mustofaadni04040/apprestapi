@@ -32,3 +32,21 @@ exports.tampilberdasarkanid = function (req, res) {
             }
         });
 };
+
+//menambahkan data mahasiswa 
+// body = data yang akan kita post kan berdasarkan input user
+exports.tambahmahasiswa = function (req, res) {
+    var nim = req.body.nim;
+    var nama = req.body.nama;
+    var jurusan = req.body.jurusan;
+
+    connection.query("INSERT INTO mahasiswa (nim,nama,jurusan) VALUES(?,?,?)",
+    [nim,nama,jurusan],
+    function (error, rows, fields) {
+        if(error) {
+            console.log(error);
+        }else {
+            response.ok("Berhasil Menambahkan Data", res);
+        }
+    });
+};
